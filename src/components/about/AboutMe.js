@@ -5,11 +5,9 @@ const AboutMe = () => {
     <div className="flex flex-col md:flex-row pb-6">
       <div className="w-full md:w-1/2 text-zinc-400 px-6 border-r-[1px] border-r-zinc-800 flex items-center">
         <div className="py-6">
-          <h2 className="font-semibold mb-1">Hello! I'm John Doe</h2>
+          <h2 className="font-semibold mb-1">Hello! I'm Arda Şevik</h2>
           <p className="text-base leading-6 ">
-            Web designer from USA, California. I have rich experience in web
-            site design and building, also I am good at wordpress. I love to
-            talk with you about our unique.
+          I was born on October 3, 2000, in Izmir, and I recently completed my 4th year in Computer Engineering at Mersin University. I’m interested in mobile app development, robotics, AI, and machine learning. Through my internships and studies, I’ve gained experience in both Front-End and Back-End development, with a focus on Front-End. Currently, I’m improving my Back-End skills with Firebase. I have B2 level English and an A2 driver's license.
           </p>
         </div>
       </div>
@@ -20,16 +18,24 @@ const AboutMe = () => {
             24
           </li>
           <li className="aboutRightLi">
+            <span className="aboutRightLiSpan">Degree:</span>
+            Computer Engineering
+          </li>
+          <li className="aboutRightLi">
+            <span className="aboutRightLiSpan">School:</span>
+            Mersin University
+          </li>
+          <li className="aboutRightLi">
+            <span className="aboutRightLiSpan">Address:</span>
+            Istanbul, Pendik
+          </li>
+          <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Residence:</span>
-            USA
+            Turkiye
           </li>
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Freelance:</span>
             Available
-          </li>
-          <li className="aboutRightLi">
-            <span className="aboutRightLiSpan">Address:</span>
-            California, USA
           </li>
         </ul>
       </div>

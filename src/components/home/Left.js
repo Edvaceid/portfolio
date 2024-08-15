@@ -10,7 +10,7 @@ import { bannerImg } from "../../assets/index";
 
 const Left = () => {
   const [text] = useTypewriter({
-    words: ["Web Developer", "Full Stack Developer", "UI Designer"],
+    words: ["Flutter Developer", "Python Developer", "Frontend Developer", "Machine Learning", "Data Mining", "Robotics", "Electronics"],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
@@ -28,34 +28,49 @@ const Left = () => {
       </div>
       <div className="w-full h-2/5 flex flex-col justify-between border-t-0 rounded-bl-xl rounded-br-xl">
         <div className="flex flex-col items-center gap-2 py-10">
-          <h1 className="text-textColor text-4xl font-semibold">John Doe</h1>
+          <h1 className="text-textColor text-4xl font-semibold">Arda ŞEVİK</h1>
           <p className="text-base text-designColor tracking-wide">
             {text}
             <Cursor cursorBlinking="false" cursorStyle="|" />
           </p>
-          <div className="flex justify-center gap-2 mt-2">
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <FaGithub />
-            </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <FaLinkedin />
-            </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <SiYoutubemusic />
-            </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <BsFacebook />
-            </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <FiInstagram />
-            </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <AiFillTwitterCircle />
-            </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <FiMail />
-            </span>
-          </div>
+<div className="flex justify-center gap-2 mt-2">
+  <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+    <a href="https://github.com/edvaceid" target="_blank" rel="noreferrer">
+      <FaGithub />
+    </a>
+  </span>
+  <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+    <a href="https://linkedin.com/in/ardasevik" target="_blank" rel="noreferrer">
+      <FaLinkedin />
+    </a>
+  </span>
+  <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+    <a href="https://www.youtube.com/channel/@arda6566" target="_blank" rel="noreferrer">
+      <SiYoutubemusic />
+    </a>
+  </span>
+  <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+    <a href="https://facebook.com/sizin_kullanici_adiniz" target="_blank" rel="noreferrer">
+      <BsFacebook />
+    </a>
+  </span>
+  <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+    <a href="https://instagram.com/edvaceid" target="_blank" rel="noreferrer">
+      <FiInstagram />
+    </a>
+  </span>
+  <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+    <a href="https://twitter.com/sizin_kullanici_adiniz" target="_blank" rel="noreferrer">
+      <AiFillTwitterCircle />
+    </a>
+  </span>
+  <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+    <a href="mailto:ardasevikk@gmail.com" target="_blank" rel="noreferrer">
+      <FiMail />
+    </a>
+  </span>
+</div>
+
         </div>
         <div className="flex h-14">
           <a
