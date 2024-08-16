@@ -6,8 +6,6 @@ import {
   workImgFour,
   workImgFive,
   workImgSix,
-  workImgSeven,
-  workImgEight,
 } from "../../assets";
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
