@@ -34,9 +34,9 @@ const Education = () => {
       <div className="col-span-9 md:col-span-4">
         <ResumeTitle title="Education" icon={<GiGraduateCap />} />
         <ResumeCard
-          badge="2012 - 2014"
-          title="North South University"
-          subTitle="Dhaka"
+          badge="2019-2024"
+          title="Mersin University"
+          subTitle="Mersin/Turkiye"
           des="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, itaque ipsa quae!"
         />
         <ResumeCard
