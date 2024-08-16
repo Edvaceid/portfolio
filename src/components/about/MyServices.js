@@ -1,7 +1,7 @@
 import React from "react";
-import { FaAppStoreIos, FaPersonBooth, FaRobot } from "react-icons/fa";
-import { AiFillMobile, AiOutlineMobile, AiTwotoneAppstore } from "react-icons/ai";
-import { SiAntdesign, SiDatabricks } from "react-icons/si";
+import { FaRobot } from "react-icons/fa";
+import { AiOutlineMobile,} from "react-icons/ai";
+import { SiDatabricks } from "react-icons/si";
 import { BiCodeAlt } from "react-icons/bi";
 import ServicesCard from "./ServicesCard";
 
