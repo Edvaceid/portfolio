@@ -19,46 +19,36 @@ const Projects = () => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lgl:gap-10">
         <div className="px-6">
           <ProjectsCard
-            title="Blog Website"
-            category="Website"
+            title="Cyber Security Education and Cooperation Platform"
+            category="Mobile Application"
             image={workImgThree}
           />
           <ProjectsCard
-            title="Business Card Design"
-            category="Design"
-            image={workImgOne}
-          />
-          <ProjectsCard
-            title="Infinity Logo"
-            category="Logo"
+            title="Image Processing OpenCV Human Distance Measurement"
+            category="Machine Learning"
             image={workImgTwo}
           />
           <ProjectsCard
-            title="Mobile Application"
-            category="Shopping"
-            image={workImgFive}
+            title="Smart Pet Collar IOT"
+            category="IOT/Mobile Application"
+            image={workImgFour}
           />
         </div>
         <div className="px-6">
           <ProjectsCard
-            title="Responsive website"
-            category="E-commerce"
-            image={workImgFour}
+            title="Logistics Tracking ERP application"
+            category="Mobile Application"
+            image={workImgOne}
           />
           <ProjectsCard
-            title="Grapic Design"
-            category="Design"
+            title="Online Ordering Customer Analytics Data Mining"
+            category="Data Mining"
+            image={workImgFive}
+          />
+          <ProjectsCard
+            title="Sonar System"
+            category="Robotics"
             image={workImgSix}
-          />
-          <ProjectsCard
-            title="Ideas & Blog"
-            category="Website"
-            image={workImgEight}
-          />
-          <ProjectsCard
-            title="ZOSS Logo"
-            category="Logo"
-            image={workImgSeven}
           />
         </div>
       </div>
