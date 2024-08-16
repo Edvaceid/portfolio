@@ -34,8 +34,8 @@ const AboutMe = () => {
             Turkiye
           </li>
           <li className="aboutRightLi">
-            <span className="aboutRightLiSpan">Freelance:</span>
-            Available
+            <span className="aboutRightLiSpan">Job:</span>
+            Open To Work
           </li>
         </ul>
       </div>

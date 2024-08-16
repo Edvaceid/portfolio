@@ -45,7 +45,7 @@ const Left = () => {
     </a>
   </span>
   <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-    <a href="https://www.youtube.com/channel/@arda6566" target="_blank" rel="noreferrer">
+    <a href="https://www.youtube.com/@arda6566" target="_blank" rel="noreferrer">
       <SiYoutubemusic />
     </a>
   </span>
