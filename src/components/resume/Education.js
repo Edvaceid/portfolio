@@ -6,8 +6,9 @@ import ResumeCard from "./ResumeCard";
 
 const Education = () => {
   return (
-    <div className="w-full grid grid-cols-9 px-6">
-      <div className="col-span-9 md:col-span-4">
+    <div className="w-full flex flex-col gap-10 px-6">
+      {/* =============== Experience Section =================== */}
+      <div className="w-full">
         <ResumeTitle title="Experience" icon={<MdWork />} />
         <ResumeCard
           badge="2024"
@@ -28,10 +29,9 @@ const Education = () => {
           des="During my student life, I worked as a barista in many chain coffee companies and boutique cafes in order to make pocket money for myself. For example, Sabiha Gökçen Airport International Department Starbucks, Sayapark Soulmate... I have a total of more than one year of experience as a barista"
         />
       </div>
-      <div className="w-full h-full hidden lgl:flex justify-center items-center">
-        <span className="w-[1px] h-full bg-zinc-800 inline-flex"></span>
-      </div>
-      <div className="col-span-9 md:col-span-4">
+
+      {/* =============== Education Section =================== */}
+      <div className="w-full">
         <ResumeTitle title="Education" icon={<GiGraduateCap />} />
         <ResumeCard
           badge="2019-2024"
@@ -44,7 +44,7 @@ const Education = () => {
           title="Oguz Fen Bilimleri High School"
           subTitle="Istanbul / Turkiye"
           des="I completed my high school education here."
-        /> 
+        />
       </div>
     </div>
   );

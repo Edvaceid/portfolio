@@ -25,10 +25,7 @@ const AboutMe = () => {
             <span className="aboutRightLiSpan">School:</span>
             Mersin University
           </li>
-          <li className="aboutRightLi">
-            <span className="aboutRightLiSpan">Address:</span>
-            Istanbul, Pendik
-          </li>
+
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Residence:</span>
             Turkiye
