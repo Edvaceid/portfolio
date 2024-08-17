@@ -14,32 +14,32 @@ const Contact = () => {
   return (
     <div className="w-full">
       <Title title="Get" subTitle="in Touch" />
-      <div className="p-6 w-full flex flex-col items-start gap-10 text-3xl text-[#ccc]">
-        <div className="w-full flex justify-between items-center border-b-[2px] border-b-zinc-800 py-8">
-          <span className="bg-designColor text-gray-700 text-3xl font-titleFont font-bold px-6 rounded-md">
+      <div className="p-6 w-full flex flex-col items-center gap-8 text-lg md:text-xl lg:text-2xl text-[#ccc]">
+        <div className="w-full flex flex-col items-center border-b-[1px] border-b-zinc-800 py-4 lg:py-6">
+          <span className="bg-designColor text-gray-700 text-lg md:text-xl lg:text-2xl font-titleFont font-bold px-4 lg:px-6 rounded-md mb-2">
             Address:
           </span>
-          <span className="text-right w-2/3">Istanbul / Pendik</span>
+          <span className="text-center">Istanbul / Pendik</span>
         </div>
-        <div className="w-full flex justify-between items-center border-b-[2px] border-b-zinc-800 py-8">
-          <span className="bg-designColor text-gray-700 text-3xl font-titleFont font-bold px-6 rounded-md">
+        <div className="w-full flex flex-col items-center border-b-[1px] border-b-zinc-800 py-4 lg:py-6">
+          <span className="bg-designColor text-gray-700 text-lg md:text-xl lg:text-2xl font-titleFont font-bold px-4 lg:px-6 rounded-md mb-2">
             Phone:
           </span>
-          <span className="text-right w-2/3">+90 545 572 3019</span>
+          <span className="text-center">+90 545 572 3019</span>
         </div>
-        <div className="w-full flex justify-between items-center border-b-[2px] border-b-zinc-800 py-8">
-          <span className="bg-designColor text-gray-700 text-3xl font-titleFont font-bold px-6 rounded-md">
+        <div className="w-full flex flex-col items-center border-b-[1px] border-b-zinc-800 py-4 lg:py-6">
+          <span className="bg-designColor text-gray-700 text-lg md:text-xl lg:text-2xl font-titleFont font-bold px-4 lg:px-6 rounded-md mb-2">
             Email:
           </span>
-          <a href="mailto:ardasevikk@gmail.com" className="text-right w-2/3 hover:text-designColor">
+          <a href="mailto:ardasevikk@gmail.com" className="text-center hover:text-designColor">
             ardasevikk@gmail.com
           </a>
         </div>
-        <div className="w-full flex justify-between items-center border-b-[2px] border-b-zinc-800 py-8">
-          <span className="bg-designColor text-gray-700 text-3xl font-titleFont font-bold px-6 rounded-md">
+        <div className="w-full flex flex-col items-center border-b-[1px] border-b-zinc-800 py-4 lg:py-6">
+          <span className="bg-designColor text-gray-700 text-lg md:text-xl lg:text-2xl font-titleFont font-bold px-4 lg:px-6 rounded-md mb-2">
             Job:
           </span>
-          <span className="text-right w-2/3">
+          <span className="text-center">
             {text}
             <Cursor cursorStyle="|" />
           </span>
