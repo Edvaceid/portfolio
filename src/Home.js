@@ -1,25 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaEnvelope } from "react-icons/fa";
 import { IoIosPaper } from "react-icons/io";
-import { MdWork, MdOutlineClose } from "react-icons/md";
+import { MdWork} from "react-icons/md";
 import Left from "./components/home/Left";
 import About from "./components/about/About";
 import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
-import Sidenav from "./components/home/sidenav/Sidenav";
+import Contact from "./components/contact/Contact";
+
 
 const Home = () => {
   const [about, setAbout] = useState(true);
   const [resume, setResume] = useState(false);
   const [projects, setProjects] = useState(false);
-  const [sidenav, setSidenav] = useState(false);
+  const [contact, setContact] = useState(false);
   const ref = useRef();
 
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
       if (e.target.contains(ref.current)) {
-        setSidenav(false);
+
       }
     });
   }, []);
@@ -32,28 +33,7 @@ const Home = () => {
 
         {/* ======= Home Icon End */}
 
-        {/* ============= Sidenav Start here ============= */}
-        {sidenav && (
-          <div className="w-full h-screen fixed top-0 left-0 bg-black bg-opacity-50 z-50">
-            <div className="w-96 h-full relative">
-              <motion.div
-                ref={ref}
-                initial={{ x: -500, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="w-full h-full bg-bodyColor overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]"
-              >
-                <Sidenav />
-                <span
-                  onClick={() => setSidenav(false)}
-                  className="absolute top-0 -right-16 w-12 h-12 bg-bodyColor text-2xl text-textColor hover:text-designColor duration-300 cursor-pointer flex items-center justify-center z-50"
-                >
-                  <MdOutlineClose />
-                </span>
-              </motion.div>
-            </div>
-          </div>
-        )}
+
         {/* ============= Sidenav End here =============== */}
         {/* ======= Other Icons Start */}
         <div className="w-full h-auto bg-bodyColor rounded-3xl flex flex-col items-center py-2">
@@ -62,7 +42,8 @@ const Home = () => {
             onClick={() =>
               setAbout(true) &
               setResume(false) &
-              setProjects(false)
+              setProjects(false) &
+              setContact(false)
             }
             className={`${
               about
@@ -80,7 +61,8 @@ const Home = () => {
             onClick={() =>
               setAbout(false) &
               setResume(true) &
-              setProjects(false)
+              setProjects(false) &
+              setContact(false)
             }
             className={`${
               resume
@@ -98,7 +80,8 @@ const Home = () => {
             onClick={() =>
               setAbout(false) &
               setResume(false) &
-              setProjects(true)
+              setProjects(true) &
+              setContact(false)
             }
             className={`${
               projects
@@ -109,6 +92,25 @@ const Home = () => {
             <MdWork />
             <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               Projects
+            </span>
+          </span>
+          {/* Contact Icon */}
+          <span
+            onClick={() =>
+              setAbout(false) &
+              setResume(false) &
+              setProjects(false) &
+              setContact(true)
+            }
+            className={`${
+              contact
+                ? "text-designColor"
+                : "w-full h-10 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group"
+            } w-full h-10 mt-2 flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+          >
+            <FaEnvelope />
+            <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+              Contact
             </span>
           </span>
         </div>
@@ -125,6 +127,7 @@ const Home = () => {
             <About />
             <Resume />
             <Projects />
+            <Contact />
           </div>
           {/* ======================== Smaller device content End ========================== */}
           <div className="w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
@@ -154,6 +157,15 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Projects />
+              </motion.div>
+            )}
+            {contact && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Contact />
               </motion.div>
             )}
           </div>

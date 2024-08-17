@@ -1,162 +1,49 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { FiSend } from "react-icons/fi";
+import React from "react";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Title from "../home/Title";
 
 const Contact = () => {
-  const [clientName, setClientName] = useState("");
-  const [email, setEmail] = useState("");
-  const [messages, setMessages] = useState("");
+  const [text] = useTypewriter({
+    words: ["Open To Work"],
+    loop: true,
+    typeSpeed: 30,
+    deleteSpeed: 20,
+    delaySpeed: 2000,
+  });
 
-  // ================= Error Messages Start here =================
-  const [errClientName, setErrClientName] = useState(false);
-  const [errEmail, setErrEmail] = useState(false);
-  const [errMessages, setErrMessage] = useState(false);
-  // ================= Error Messages End here ===================
-  const [seuccessMsg, setSuccessMsg] = useState("");
-  // ================= Email Validation Start here ===============
-  const EmailValidation = (email) => {
-    return String(email)
-      .toLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
-  };
-  // ================= Email Validation End here =================
-
-  const handleName = (e) => {
-    setClientName(e.target.value);
-    setErrClientName(false);
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-    setErrEmail(false);
-  };
-  const handleMessages = (e) => {
-    setMessages(e.target.value);
-    setErrMessage(false);
-  };
-
-  const handleSend = (e) => {
-    e.preventDefault();
-    if (!clientName) {
-      setErrClientName(true);
-    }
-    if (!email) {
-      setErrEmail(true);
-    } else {
-      if (!EmailValidation(email)) {
-        setErrEmail(true);
-      }
-    }
-    if (!messages) {
-      setErrMessage(true);
-    }
-    if (clientName && email && EmailValidation(email) && messages) {
-      axios.post("https://getform.io/f/e18ee560-5133-4cfe-9a48-eddb6f012a9f", {
-        name: clientName,
-        email: email,
-        message: messages,
-      });
-      setSuccessMsg(
-        `Hello dear ${clientName}, Your messages has been sent successfully. Thank you for your time!`
-      );
-      setClientName("");
-      setEmail("");
-      setMessages("");
-    }
-  };
   return (
     <div className="w-full">
       <Title title="Get" subTitle="in Touch" />
-      <div className="p-6 w-full flex flex-col md:flex-row justify-between gap-4 md:gap-10 lgl:gap-20">
-        <div className="w-full lgl:w-1/2">
-          <p className="flex gap-6 justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
-            <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-              Address:
-            </span>
-            Istanbul / Pendik
-          </p>
-          <p className="flex justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
-            <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-              Phone:
-            </span>
-            +90 545 572 3019
-          </p>
+      <div className="p-6 w-full flex flex-col items-start gap-10 text-3xl text-[#ccc]">
+        <div className="w-full flex justify-between items-center border-b-[2px] border-b-zinc-800 py-8">
+          <span className="bg-designColor text-gray-700 text-3xl font-titleFont font-bold px-6 rounded-md">
+            Address:
+          </span>
+          <span className="text-right w-2/3">Istanbul / Pendik</span>
         </div>
-        <div className="w-full lgl:w-1/2">
-          <p className="flex justify-between lgl:gap-6 w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
-            <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-              Email:
-            </span>
+        <div className="w-full flex justify-between items-center border-b-[2px] border-b-zinc-800 py-8">
+          <span className="bg-designColor text-gray-700 text-3xl font-titleFont font-bold px-6 rounded-md">
+            Phone:
+          </span>
+          <span className="text-right w-2/3">+90 545 572 3019</span>
+        </div>
+        <div className="w-full flex justify-between items-center border-b-[2px] border-b-zinc-800 py-8">
+          <span className="bg-designColor text-gray-700 text-3xl font-titleFont font-bold px-6 rounded-md">
+            Email:
+          </span>
+          <a href="mailto:ardasevikk@gmail.com" className="text-right w-2/3 hover:text-designColor">
             ardasevikk@gmail.com
-          </p>
-          <p className="flex justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
-            <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-              Job:
-            </span>
-            Open To Work
-          </p>
+          </a>
         </div>
-      </div>
-      <div className="w-full mt-10">
-        <Title title="Send" subTitle="Messages" />
-        {seuccessMsg ? (
-          <p className="text-center text-base font-titleFont p-20 text-designColor">
-            {seuccessMsg}
-          </p>
-        ) : (
-          <form
-            id="form"
-            action="https://getform.io/f/e18ee560-5133-4cfe-9a48-eddb6f012a9f"
-            method="POST"
-            className="p-6 flex flex-col gap-6"
-          >
-            <div className="w-full flex flex-col lgl:flex-row gap-4 lgl:gap-10 justify-between">
-              <input
-                onChange={handleName}
-                value={clientName}
-                className={`${
-                  errClientName
-                    ? "border-red-600 focus-visible:border-red-600"
-                    : "border-zinc-600 focus-visible:border-designColor"
-                } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300`}
-                // className="w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 border-zinc-600 focus-visible:border-designColor outline-none duration-300"
-                type="text"
-                placeholder="Full Name"
-              />
-              <input
-                onChange={handleEmail}
-                value={email}
-                className={`${
-                  errEmail
-                    ? "border-red-600 focus-visible:border-red-600"
-                    : "border-zinc-600 focus-visible:border-designColor"
-                } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300`}
-                type="email"
-                placeholder="Email Address"
-              />
-            </div>
-            <textarea
-              onChange={handleMessages}
-              value={messages}
-              className={`${
-                errMessages
-                  ? "border-red-600 focus-visible:border-red-600"
-                  : "border-zinc-600 focus-visible:border-designColor"
-              } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300 resize-none`}
-              placeholder="Your Message"
-              rows="4"
-            ></textarea>
-            <button
-              onClick={handleSend}
-              className="text-base w-44 flex items-center gap-1 text-gray-200 hover:text-designColor duration-200"
-            >
-              Send Message{" "}
-              <span className="mt-1 text-designColor">
-                <FiSend />
-              </span>
-            </button>
-          </form>
-        )}
+        <div className="w-full flex justify-between items-center border-b-[2px] border-b-zinc-800 py-8">
+          <span className="bg-designColor text-gray-700 text-3xl font-titleFont font-bold px-6 rounded-md">
+            Job:
+          </span>
+          <span className="text-right w-2/3">
+            {text}
+            <Cursor cursorStyle="|" />
+          </span>
+        </div>
       </div>
     </div>
   );
