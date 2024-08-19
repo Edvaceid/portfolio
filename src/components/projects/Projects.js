@@ -1,12 +1,10 @@
 import React from "react";
-import {
-  workImgOne,
-  workImgTwo,
-  workImgThree,
-  workImgFour,
-  workImgFive,
-  workImgSix,
-} from "../../assets";
+import cybEduPortfolio from "../../assets/work/cybEduPortfolio.png";
+import dataMiningPortfolio from "../../assets/work/dataMiningPortfolio.png";
+import fastLojistikPortfolio from "../../assets/work/fastLojistikPortfolio.png";
+import imageProcessingPortfolio from "../../assets/work/imageProcessingPortfolio.png";
+import petLocatorPortfolio from "../../assets/work/petLocatorPortfolio.png";
+import radarSystemPortfolio from "../../assets/work/radarSystemPortfolio.png";
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
 
@@ -19,39 +17,40 @@ const Projects = () => {
           <ProjectsCard
             title="Cyber Security Education and Cooperation Platform"
             category="Mobile Application"
-            image={workImgThree}
+            image={cybEduPortfolio} // Yeni resim burada
           />
           <ProjectsCard
             title="Image Processing OpenCV Human Distance Measurement"
             category="Machine Learning"
-            image={workImgTwo}
+            image={imageProcessingPortfolio} // Yeni resim burada
           />
           <ProjectsCard
             title="Smart Pet Collar IOT"
             category="IOT/Mobile Application"
-            image={workImgFour}
+            image={petLocatorPortfolio} // Yeni resim burada
           />
         </div>
         <div className="px-6">
           <ProjectsCard
             title="Logistics Tracking ERP application"
             category="Mobile Application"
-            image={workImgOne}
+            image={fastLojistikPortfolio} // Yeni resim burada
           />
           <ProjectsCard
             title="Online Ordering Customer Analytics Data Mining"
             category="Data Mining"
-            image={workImgFive}
+            image={dataMiningPortfolio} // Yeni resim burada
           />
           <ProjectsCard
             title="Sonar System"
             category="Robotics"
-            image={workImgSix}
+            image={radarSystemPortfolio} // Yeni resim burada
           />
         </div>
       </div>
     </div>
   );
 };
+
 
 export default Projects;

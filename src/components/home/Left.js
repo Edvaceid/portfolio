@@ -1,6 +1,6 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { BsCloudLightningFill} from "react-icons/bs";
+import { BsCloudLightningFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiYoutubemusic } from "react-icons/si";
 import { FiInstagram, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
@@ -9,7 +9,15 @@ import { bannerImg } from "../../assets/index";
 
 const Left = () => {
   const [text] = useTypewriter({
-    words: ["Flutter Developer", "Python Developer", "Frontend Developer", "Machine Learning", "Data Mining", "Robotics", "Electronics"],
+    words: [
+      "Flutter Developer",
+      "Python Developer",
+      "Frontend Developer",
+      "Machine Learning",
+      "Data Mining",
+      "Robotics",
+      "Electronics",
+    ],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
@@ -34,27 +42,47 @@ const Left = () => {
           </p>
           <div className="flex justify-center gap-2 mt-2">
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <a href="https://github.com/edvaceid" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/edvaceid"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaGithub />
               </a>
             </span>
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <a href="https://linkedin.com/in/ardasevik" target="_blank" rel="noreferrer">
+              <a
+                href="https://linkedin.com/in/ardasevik"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaLinkedin />
               </a>
             </span>
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <a href="https://www.youtube.com/@arda6566" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.youtube.com/@arda6566"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <SiYoutubemusic />
               </a>
             </span>
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <a href="https://instagram.com/edvaceid" target="_blank" rel="noreferrer">
+              <a
+                href="https://instagram.com/edvaceid"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FiInstagram />
               </a>
             </span>
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-              <a href="mailto:ardasevikk@gmail.com" target="_blank" rel="noreferrer">
+              <a
+                href="mailto:ardasevikk@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FiMail />
               </a>
             </span>
@@ -77,7 +105,12 @@ const Left = () => {
             <span className="bg-designColor text-gray-700 text-xs font-titleFont font-medium px-2 py-1 rounded-md">
               <FiMail />
             </span>
-            <span>ardasevikk@gmail.com</span>
+            <a
+              href="mailto:ardasevikk@gmail.com"
+              className="text-[#ccc] hover:text-designColor"
+            >
+              ardasevikk@gmail.com
+            </a>
           </div>
         </div>
         <div className="flex h-24">

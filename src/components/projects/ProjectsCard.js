@@ -7,14 +7,14 @@ const ProjectsCard = ({ image, title, category }) => {
         <img
           className="w-full h-full object-cover scale-100 group-hover:scale-110 duration-300 cursor-pointer"
           src={image}
-          alt="ImageOne"
+          alt="Project"
         />
         <div className="w-full h-full absolute top-0 left-0 hover:bg-gradient-to-r from-green-600 via-green-600 to-green-200 opacity-20"></div>
       </div>
-      <h3 className="font-titleFont text-lg font-semibold text-[#ccc]">
+      <h3 className="font-titleFont text-lg font-semibold text-[#ccc] text-center">
         {title}
       </h3>
-      <p className="text-base text-gray-400 -mt-1">{category}</p>
+      <p className="text-base text-gray-400 -mt-1 text-center">{category}</p>
     </div>
   );
 };
