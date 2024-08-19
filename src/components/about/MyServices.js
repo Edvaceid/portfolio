@@ -11,22 +11,22 @@ const MyServices = () => {
       <ServicesCard
         icons={<AiOutlineMobile />}
         title="Mobile Application"
-        subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        subTitle="I have been coding Flutter/Dart for about 2 years. I can also use RestAPI and external libraries. This enthusiasm, which started in my classes, has also reflected in my professional life."
       />
       <ServicesCard
         icons={<BiCodeAlt />}
         title="Web Development"
-        subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        subTitle="I developed projects with .NET in my school projects, but now I am developing myself with React JS. I developed the portfolio you see in front of you with React JS."
       />
       <ServicesCard
         icons={<SiDatabricks />}
         title="Exploratory Data Analysis"
-        subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        subTitle="Using Python and related datasets, I can perform analyses on these datasets, support them with machine learning and visualize them with graphs. I have developed a few such projects at my school."
       />
       <ServicesCard
         icons={<FaRobot />}
         title="IOT/Robotics"
-        subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        subTitle="I have developed a few useful projects in my school related to the Internet of Things and Robotics. It is a branch that I am very interested in and follow. I can also make the necessary integrations with other software."
       />
     </div>
   );
