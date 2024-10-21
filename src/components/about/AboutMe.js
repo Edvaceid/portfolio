@@ -32,7 +32,7 @@ const AboutMe = () => {
           </li>
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Job:</span>
-            Open To Work
+            Mobile Application Developer / Flutter / Eterna Technology
           </li>
         </ul>
       </div>
