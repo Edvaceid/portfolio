@@ -4,7 +4,7 @@ import Title from "../home/Title";
 
 const Contact = () => {
   const [text] = useTypewriter({
-    words: ["Mobile Application Developer / Flutter / Eterna Technology"],
+    words: ["Open To Work"],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
