@@ -7,7 +7,7 @@ const AboutMe = () => {
         <div className="py-6">
           <h2 className="font-semibold mb-1">Hello! I'm Arda Şevik</h2>
           <p className="text-base leading-6 ">
-          Born on October 3, 2000 in Izmir, I completed my undergraduate education in Computer Engineering at Mersin University. I am interested in mobile application development, robotics development, artificial intelligence and machine learning. Thanks to the internships I completed and my school, I took part in many projects where I undertook both Front-End and Back-End tasks. I am more in the foreground in the Front-End part (Flutter, React, Next, React Native), I am currently improving myself with FireBase, MongoDB and JS in Back-End. I have B2 Intermediate level English. I have an A2 driver's license.
+          A recent graduate of Computer Engineering from Mersin University with hands-on experience in mobile application development, UI design, and cloud-based solutions. Specialized in Flutter and React ecosystems with back-end development knowledge using Firebase and MongoDB. Worked in real-world projects both individually and in teams. Enthusiastic about artificial intelligence, robotics, and IoT technologies.
           </p>
         </div>
       </div>
