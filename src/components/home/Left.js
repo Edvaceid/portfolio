@@ -4,7 +4,7 @@ import { BsCloudLightningFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiYoutubemusic } from "react-icons/si";
 import { FiInstagram, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
-import CV from "../../assets/ardasevikcv.pdf";
+import CV from "../../assets/arda_sevik_resume_english.pdf";
 import { bannerImg } from "../../assets/index";
 
 const Left = () => {
